@@ -24,3 +24,12 @@ body {
     transform: scale(1.02);
     transform: transform 100ms;
 }
+.answer-prefix {
+    padding: 2rem 2.5rem;
+    color: var(--white);
+}
+
+.answer-text {
+    padding: 2rem;
+    width: 100%;
+}
