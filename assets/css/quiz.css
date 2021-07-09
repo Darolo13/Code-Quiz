@@ -49,3 +49,13 @@ body {
 }
 
 /* ---------------- answer result style end ---------------------------- */
+
+/* --------------------- media queries --------------------------------- */
+
+@media screen and (max-width: 768px) {
+    .answer-container {
+        min-width: 40rem;
+    }
+}
+
+/* --------------------- media queries end ------------------------------*/
