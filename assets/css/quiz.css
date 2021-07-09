@@ -1,0 +1,26 @@
+:root {
+    --white: #fff;
+    --dark: #1C1A1A;
+    --indigo: #4B0082;
+}
+
+body {
+    color: var(--white);
+}
+
+.answer-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: var(--indigo);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(141, 64, 204, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
