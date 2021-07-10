@@ -41,14 +41,48 @@ body {
 /* ---------------- answer result style ------------------------------- */
 
 .correct {
-    background: rgba(11, 223, 36) 0%, rgba(41, 232, 111) 100%;
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgba(41, 232, 111) 100%);
 }
 
 .incorrect {
-    background: rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1) 100%;
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1) 100%);
 }
 
 /* ---------------- answer result style end ---------------------------- */
+
+/* --------------------------- hud ------------------------------------- */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+/* --------------------------- hud style end ---------------------------*/
 
 /* --------------------- media queries --------------------------------- */
 
