@@ -53,7 +53,7 @@ var questions = [
     }
 ]
 
-var SCORE_POINTS = 100
+var SCORE_POINTS = 10
 var MAX_QUESTIONS = 5
 
 startGame = () => {
@@ -67,7 +67,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', time)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('end.html')
     }
 
     questionCounter++
@@ -118,10 +118,9 @@ incrementTime = num => {
 }
 
 decrementScore = num => {
-    score -=num 
-    scoreText.innerText = score
+    time -=num 
+    scoreText.innerText = time
 }
 
-
-
 startGame()
+
