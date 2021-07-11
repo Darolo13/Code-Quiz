@@ -1,0 +1,19 @@
+:root {
+    --white: #fff;
+    --dark: #1C1A1A;
+    --indigo: #4B0082;
+}
+
+body {
+    color: var(--white);
+}
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
