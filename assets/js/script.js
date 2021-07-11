@@ -123,4 +123,3 @@ decrementScore = num => {
 }
 
 startGame()
-
