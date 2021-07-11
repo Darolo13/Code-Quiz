@@ -5,3 +5,10 @@ highScoresList.innerHTML =
     highScores.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`
     }).join("")
+    
+
+  function deleteItems() {
+      // clear local storage items.
+      window.localStorage.clear();
+      return window.location.assign('index.html');
+   }
