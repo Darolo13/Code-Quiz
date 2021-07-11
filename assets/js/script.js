@@ -1,8 +1,10 @@
+
+
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.answer-text'));
 var progressText = document.querySelector('#progressText');
-var scoreText = document.querySelector('#score');
 var progressBarFull = document.querySelector('#progressBarFull');
+var scoreText = document.querySelector('#score');
 
 var currentQuestion = {}
 var acceptingAnswers = true
@@ -54,11 +56,29 @@ var questions = [
 ]
 
 var SCORE_POINTS = 10
+var SCORE_WRONG =  5
 var MAX_QUESTIONS = 5
 
 startGame = () => {
     questionCounter = 0
-    time = 0
+    
+    var timeleft = 50;
+    var subtract = timeleft - SCORE_WRONG
+
+    var downloadTimer = setInterval(function function1(){
+    document.getElementById("score").innerHTML = timeleft;
+
+    timeleft -= 1;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("score").innerHTML = "Time is up!"
+        return window.location.assign('end.html')
+    }
+    }, 1000);
+
+    
+    console.log(score);
+     
     availableQuestions = [...questions]
     getNewQuestion()
 }
@@ -100,7 +120,7 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementTime(SCORE_POINTS)
         } else {
-            decrementScore(SCORE_POINTS)
+            decrementTime(SCORE_WRONG)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -112,12 +132,13 @@ choices.forEach(choice => {
     })
 })
 
+
 incrementTime = num => {
     time += num
     scoreText.innerText = time
 }
 
-decrementScore = num => {
+decrementTime = num => {
     time -= num
     scoreText.innerText = time
 }
