@@ -144,11 +144,34 @@ input::placeholder {
     box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5);
 }
 
-/* crown icon style */
+/* ------------------------ crown icon style ---------------------------- */
 .fa-crown {
     font-size: 2.5rem;
     margin-left: 1rem;
 }
-/* crown icon style end */
+/* ------------------------- crown icon style end ----------------------- */
 
-/* highscore button style end */
+/* -------------------------- highscore button style end ----------------- */
+
+/* ------------------------ delete button style ------------------------ */
+
+#delete-btn {
+    background: linear-gradient(90deg, rgb(196, 0, 0) 0%,
+    rgb(255, 0, 0) 100%);
+}
+
+#delete-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(170, 0, 0, 0.596);
+}
+
+/* ------------------------------------ trash icon style -------------------*/
+
+.fa-trash {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    color: var(--dark)
+}
+
+/* ------------------------------------ trash icon style end ---------------- */
+
+/* ---------------------------- delete button style end -------------------- */
